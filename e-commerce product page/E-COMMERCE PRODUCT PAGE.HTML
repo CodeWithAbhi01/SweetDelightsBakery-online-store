@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #f0f0f0, #c0c0c0);
+color: #000000; 
+
+
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+
+        nav {
+            float: right;
+        }
+
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        section {
+            padding: 69px 0;
+        }
+
+        h2 {
+            color: #02000a;
+            font-weight:bolder;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            line-height: 1.6em;
+            color: #555;
+            font-weight: bold;
+            box-shadow: #e9183b;
+        
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+        }
+
+        .product {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        img {
+            max-width: 30%;
+            height: 3%;
+            display: block;
+            margin: 5px auto;
+            border-radius: 12px;
+        }
+
+        header h1 {
+            animation: slideIn 2s ease-in-out;
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            width: 300px;
+            margin: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(52, 51, 51, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .product-card p {
+            color: #555;
+        }
+
+        .add-to-cart-btn {
+            background-color: #333;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #555;
+        }
+
+        .cart {
+            float: right;
+            margin-top: 10px;
+        }
+
+        .cart a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+        
+        .product-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .product-card {
+            width: 300px;
+            margin: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(52, 51, 51, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product-card h3 {
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .product-card p {
+            color: #555;
+        }
+
+        .add-to-cart-btn {
+            background-color: #333;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: #555;
+        }
+
+        .cart {
+            float: right;
+            margin-top: 50px;
+        }
+
+        .cart a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+
+
+
+
+
+
+
+
+
+      
+
+.cart {
+    float: right;
+    margin-top: 10px;
+}
+
+.cart a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+}
+
+.cart-popup {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 250px;
+    padding: 10px;
+    z-index: 1;
+    text-align:left;
+}
+
+.cart-items {
+    max-height: 150px;
+    overflow-y: auto;
+    padding-right: 100px;
+}
+
+.cart-items div {
+    margin-bottom: 8px;
+}
+
+.cart-total {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+button.view-cart-btn {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+button.view-cart-btn:hover {
+    background-color: #555;
+}
+.cart {
+    position: fixed; /* or absolute, depending on your layout */
+    top: 10px;
+    right: 10px;
+}
+
+
+    </style>
+
+    <title>SweetDelights Bakery</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to SweetDelights Bakery</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#store">Store</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <section id="home">
+            <h2>Discover the Sweet Delights</h2>
+            <p>Welcome to SweetDelights Bakery, where we create heavenly treats for your taste buds. From delightful pastries to custom cakes, we have something for every sweet occasion.</p>
+            <img src="./bakery.jpg.jpg" alt="SweetDelights Bakery">
+        </section>
+
+        <section id="services">
+            <h2>Our Products</h2>
+            <div class="product-list">
+            
+                <div class="product-card">
+                    <img src="Delicious Pastry.jpg" alt="Delicious Pastry">
+                    <h3>Assorted Pastries</h3>
+                    <p>Indulge in our assortment of freshly baked pastries, each a small piece of paradise.</p>
+                    <p>₹ 299</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Assorted Pastries', 299.00)">Add to Cart</button>
+                </div>
+
+            
+                <div class="product-card">
+                    <img src="home_image.jpg" alt="Customized Cakes">
+                    <h3>Customized Cakes</h3>
+                    <p>Celebrate special moments with our beautifully crafted and personalized cakes.</p>
+                    <p>₹ 299</p>
+                    <button class="add-to-cart-btn" onclick="addToCart('Customized Cakes', 299.00)">Add to Cart</button>
+                </div>
+            </div>
+
+            <div class="cart">
+                <a href="#" onclick="viewCart()">View Cart</a>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>At SweetDelights, baking is not just a job; it's a passion. We started with a dream of spreading joy through delectable desserts.</p>
+            <p>Our dedicated team of bakers and confectioners pour love into every creation, ensuring a memorable experience for our customers.</p>
+            <img src="team.jpg" alt="SweetDelights Team"><br>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Have a question or want to place an order? Reach out to us!</p>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p>Visit us at: 123 Sweet Street, Cityville</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 SweetDelights Bakery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+   
+        let cart = [];
+    
+        function addToCart(productName, price) {
+    
+            cart.push({ name: productName, price: price });
+    
+            updateCartView();
+        }
+    
+        function viewCart() {
+       
+            const cartContents = cart.map(product => `${product.name} - ₹${product.price}`).join('\n');
+            alert(`Your Cart:\n${cartContents}`);
+        }
+    
+        function updateCartView() {
+         
+            const cartElement = document.querySelector('.cart');
+    
+        
+            const cartItems = cart.map(product => {
+                return `<div>${product.name} - ₹${product.price}</div>`;
+            });
+    
+           
+            cartElement.innerHTML = `
+                <div class="cart-popup">
+                    <div class="cart-items">
+                        ${cartItems.join('')}
+                    </div>
+                    <div class="cart-total">
+                        Total: ₹${calculateTotalPrice()}
+                    </div>
+                    <button onclick="viewCart()">View Cart</button>
+                </div>
+            `;
+        }
+    
+        function calculateTotalPrice() {
+            
+            return cart.reduce((total, product) => total + product.price, 0);
+        }
+    </script>
+
+<div class="cart">
+    <a href="#" onmouseover="updateCartView()" class="view-cart-btn">View Cart</a>
+</div>
+
+<div class="cart">
+    <a href="#" onclick="viewCart()">View Cart</a>
+</div>
+
+    
+</body>
+
+</html>
